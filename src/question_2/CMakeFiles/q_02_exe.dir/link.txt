@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -Wall CMakeFiles/q_02_exe.dir/main.cpp.o CMakeFiles/q_02_exe.dir/question2.cpp.o -o q_02_exe 
