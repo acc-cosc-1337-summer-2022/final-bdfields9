@@ -1,6 +1,5 @@
 #include "question1.h"
 #include <iostream>
-#include <memory>
 
 
 using std::cout; 
@@ -13,30 +12,34 @@ int main()
     int hours = -1;
     int hourly_pay = -1;
 
-    
-
     for (int i=0; i<7; i++)
     {
+        cout<<"Add the amount of hours worked:"<<endl;
+        cin>>hours;
+
         while (hours <=0)
         {
+            cout<<"invalid input. Enter positive numbers"<<endl;
             cout<<"Add the amount of hours worked:"<<endl;
             cin>>hours;
-            if (hours<0)
-                cout<<"invalid input. Enter positive numbers"<<endl;
         }
-/*
+    
+        cout<<"Add hourly pay"<<endl;
+        cin>>hourly_pay;
+
         while (hourly_pay <= 0)
         {
+            cout<<"invalid input. Enter positive numbers"<<endl;
             cout<<"Add hourly pay"<<endl;
             cin>>hourly_pay;
-            if (hourly_pay < 0)
-                cout<<"invalid input. Enter positive numbers"<<endl;
         }
-*/
-    employees[i]= Payroll(hours,hourly_pay);
+        employees[i]= Payroll(hours,hourly_pay);
+    }
+    //employees[i]= Payroll(hours,hourly_pay);
     hours = -1;
     hourly_pay = -1;
+    return 0;
     }
 
-    return 0;
+    //return 0;
 }
