@@ -10,3 +10,11 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+
+TEST_CASE ("Test Class Function get_gross_pay")
+{
+	Payroll Test_Case1(40,10);
+	REQUIRE(Test_Case1.get_gross_pay()== 400);
+	Payroll Test_Case2(25,15);
+	REQUIRE(Test_Case2.get_gross_pay()== 375);
+}
