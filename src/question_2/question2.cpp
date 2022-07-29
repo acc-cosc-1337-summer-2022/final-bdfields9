@@ -1,12 +1,15 @@
 #include "question2.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 bool test_config()
 {
     return true;
 }
 
-Toll::Toll(int exits, int time)
+Toll::Toll(int time, int exits)
 {
     this -> time = time;
     this -> exits = exits;
@@ -40,7 +43,7 @@ double Toll::get_amount()
     {
         rate_charge = rates[5];
     }
-    
+
     return rate_charge*exits;
 
 }

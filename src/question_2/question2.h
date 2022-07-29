@@ -10,7 +10,7 @@ void tolls(std::vector<int>tolls);
 class Toll 
 {
     public:
-        Toll (int, int);
+        Toll (int time, int exits);
         double get_amount();
     private:
         int time;
