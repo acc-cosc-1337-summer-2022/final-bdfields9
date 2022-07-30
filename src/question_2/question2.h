@@ -5,16 +5,22 @@
 #include <vector>
 bool test_config();
 
-void tolls(std::vector<int>tolls);
+void tolls(std::vector<double>tolls);
 
-class Toll 
+class Toll
 {
-    public:
-        Toll (int time, int exits);
-        double get_amount();
-    private:
-        int time;
-        int exits;
+public:
+    Toll (int time, int exits);
+    double get_amount() const;
+private:
+    int time;
+    int exits;
 };
+
+int getValidTime(int time);
+
+int getValidExits(int exits);
+
+void displayToll(const std::vector<Toll> *tollVector);
 
 #endif
