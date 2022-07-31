@@ -19,7 +19,7 @@ Toll::Toll(int time, int exits)
 }
 
 double Toll::get_amount() const {
-    double rates[]={0.25,2.50,1.00,1.50,2.50,1.00};
+    double rates[]={0.21,2.50,1.00,1.50,2.50,1.00};
     double rate_charge;
     if (time < 7)
     {
@@ -70,7 +70,7 @@ int getValidExits(int exits) {
 int getValidTime(int time) {
     while (time < 0 || time > 12)
     {
-        cout<<"invalid input. Enter positive numbers. Time must be between 0 - 12 "<<endl;
+        cout<<"invalid input. Enter positive numbers. Time cannot be greater than 12 "<<endl;
         cout<<"Enter time in hour:"<<endl;
         cin >> time;
     }
